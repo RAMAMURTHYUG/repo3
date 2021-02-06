@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  {% extends "CBVAPP/parent.html" %}
+  <body>
+    <center>
+    {% block for_child %}
+    <table barder="2">
+<tr>  <th>  <h1 style="color:Blue;"><u>List Of Records</u></h1><br><br></th></tr>
+    {% for x in student_list %}
+  <tr>  <td>  <h2 style="color:Pink;"><a href="/{{x.id}}">{{x.name}}'s Details </a></h2></tr>  </td>
+    {% endfor %}
+  </table>
+  <a href="http://127.0.0.1:8000/create/" class="btn btn-lg btn-primary">Click Here To insert New Records</a>
+    {% endblock%}
+    </center>
+  </body>
+</html>
